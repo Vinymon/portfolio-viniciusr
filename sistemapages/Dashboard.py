@@ -8,7 +8,7 @@ def carregar_dados():
 
 
 def load_data():
-    data_propostas = pd.read_excel('propostas.xlsx')
+    data_propostas = pd.read_excel('Propostas.xlsx')
     if 'Codigo' in data_propostas.columns and 'Lote' in data_propostas.columns:
         data_propostas['Codigo_Lote'] = data_propostas['Codigo'].astype(str) + " - " + data_propostas['Lote'].astype(str)
     data_propostas['DataEntrega'] = pd.to_datetime(data_propostas['DataEntrega'], errors='coerce')
